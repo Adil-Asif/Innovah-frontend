@@ -1,0 +1,66 @@
+.ant-layout-sider-children {
+  height: 90%;
+
+  .Logo {
+    margin: 15px 16px 55px 23px !important;
+    width: 130px;
+  }
+
+  .ant-menu-inline {
+    .extraMargin {
+      margin-bottom: 20px !important ;
+    }
+    .antTitle:hover .customIcon {
+      opacity: 1;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu {
+      line-height: 23px;
+
+      white-space: normal;
+      margin-bottom: 15px;
+
+      .dashboardIcon {
+        width: 26px !important;
+      }
+      .ant-menu-item-icon {
+        width: 30px;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .ant-menu-item {
+        margin-bottom: 0px;
+        .ant-menu-item-icon {
+          font-size: 10px;
+          margin-left: -32px;
+          padding: 3px;
+          color: var(--white);
+        }
+        .fontAwesomePlusIcon {
+          margin-left: -22px;
+          margin-right: 6px;
+          padding: 0;
+          border: 2px solid var(--white);
+          border-radius: 100px;
+          width: 13px;
+          height: 13px;
+        }
+        .fontAwesomeColor {
+          color: var(--white) !important;
+          border-color: var(--white);
+          opacity: 1;
+        }
+      }
+      .ant-menu-submenu-title {
+        margin: 4px 0px 0px 0px;
+      }
+      .ant-menu-title-content {
+        font-family: var(--font-family-sidebar-sourcesans);
+        font-size: 17px;
+      }
+    }
+  }
+}

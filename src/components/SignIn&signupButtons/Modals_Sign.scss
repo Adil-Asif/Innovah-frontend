@@ -1,0 +1,21 @@
+.signInLayout {
+  .ant-modal-content {
+    border: 3.25px solid var(--primary-color);
+    border-radius: 16px;
+    .ant-modal-header {
+      border-radius: 16px;
+      border-bottom: none;
+      text-align: center;
+    }
+    .ant-modal-body {
+      text-align: left;
+    }
+    .ant-modal-footer {
+    }
+  }
+
+  #Submit_button {
+    margin-top: 1em;
+    margin-left: 2.5em;
+  }
+}

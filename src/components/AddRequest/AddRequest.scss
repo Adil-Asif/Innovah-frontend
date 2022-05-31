@@ -1,0 +1,61 @@
+.addRequestItem {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 40px 30px 30px 30px;
+  textarea.ant-input {
+    height: 150px;
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .ant-form-item {
+    display: flex;
+    align-items: center;
+  }
+  .ant-form-item-label {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-family-heading);
+    margin-right: 10px;
+  }
+  .ant-upload {
+    margin: 20px 0px 0px 0px;
+    border-radius: 8px;
+    height: 120px;
+    margin-bottom: 30px;
+    .ant-btn {
+      border-radius: 4px;
+      margin-bottom: 40px;
+    }
+  }
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 200px;
+    .ant-btn-primary {
+      border: none;
+      color: var(--white);
+      padding: 8px 0px 8px 0px;
+      height: fit-content;
+      text-align: center;
+      width: 25%;
+      font-size: 18px;
+      font-family: var(--font-family-button);
+      background: linear-gradient(
+          to left,
+          var(--gray) 50%,
+          var(--primary-color) 50%
+        )
+        right;
+      background-size: 200%;
+      transition: 0.5s ease-out;
+      &:hover {
+        //background-color: var(--primary-color);
+        background-position: left;
+      }
+    }
+  }
+}

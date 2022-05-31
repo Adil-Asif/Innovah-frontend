@@ -1,0 +1,123 @@
+.specificProjectPage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    .Project-heading {
+      padding: 4% 0 0 0%;
+      margin-left: 35px;
+    }
+    img {
+      width: 15%;
+      padding: 1% 3% 0% 0%;
+    }
+  }
+
+  .project-container {
+    width: 90%;
+    display: flex;
+    margin: 15px 15px 20px 5.75%;
+    justify-content: space-between;
+  }
+  .project-description {
+    width: 55%;
+    padding: 20px;
+
+    background-color: #fff;
+    border-radius: 16px;
+  }
+  .project-tracking {
+    width: 35%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+  .title-of-page {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .tasks {
+    padding: 5px;
+    cursor: pointer;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    .specific-task {
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .project-status {
+    background-color: #fff;
+    padding: 20px 0px 20px 20px;
+    border-radius: 16px;
+  }
+  .members-list {
+    text-align: left;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .member-images {
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+  }
+  .member-heading {
+    // display: block;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .Services-list {
+    text-align: left;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .Service-images {
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: 8px;
+    }
+  }
+  .Service-heading {
+    display: block;
+    width: 100%;
+  }
+  .sidebar-heads {
+    font-size: 18px;
+  }
+  .tracking-heading {
+    font-size: 20px;
+  }
+  .Service-heading {
+    font-size: 20px;
+  }
+}

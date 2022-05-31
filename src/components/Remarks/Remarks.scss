@@ -1,0 +1,17 @@
+.remarksItemLayout{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .avatar{
+        margin-right: 20px;
+    }
+    .juryFeedback{
+        .userName{
+            font-family: var(--font-family-title);
+            font-size: 25px;
+        }
+        .review{
+            font-family: var(--font-family-description);
+        }
+    }
+}

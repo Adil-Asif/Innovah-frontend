@@ -1,0 +1,101 @@
+.signUp {
+  .main-container {
+    width: 70%;
+    margin: 5% 0% 15% 16%;
+    background-color: var(--white);
+    border: 2px solid var(--textbox-border);
+    border-radius: 8px;
+  }
+  .details-heading {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: var(--font-family-title);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--textbox-border);
+  }
+  .getting-input-container {
+    padding: 60px 0px 20px 50px;
+    width: 90%;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: var(--white);
+    textarea.ant-input {
+      font-family: var(--font-family-description);
+      height: 150px;
+      width: 4000px;
+      margin-top: 10px;
+      text-transform: capitalize;
+      // border-radius: 4px;
+    }
+    .ant-input,
+    .ant-input-number,
+    .ant-select {
+      // border-radius: 4px;
+      font-family: var(--font-family-description);
+      width: 885px;
+      display: block;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+    .ant-form-item {
+      display: block;
+      padding: 0px 0px;
+    }
+    .ant-form-item-label {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: var(--font-family-heading);
+      margin-right: 10px;
+    }
+    .ant-upload {
+      margin: 20px 0px 0px 0px;
+      // border-radius: 8px;
+      height: 120px;
+      margin-bottom: 30px;
+      .ant-btn {
+        // border-radius: 4px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .form-instruction {
+    text-align: center;
+    .ant-anchor-link-title {
+      display: flex;
+      color: var(--primary-color);
+    }
+    .ant-anchor-link {
+      padding: 0 2px;
+      margin: 0px 0px -3px 0px;
+    }
+    .ant-anchor-ink::before {
+      background-color: var(--white);
+    }
+    .ant-anchor-wrapper{
+      overflow: visible;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    .ant-btn-primary {
+      border: none;
+      border-radius: 8px;
+      color: var(--white);
+      height: fit-content;
+      text-align: center;
+      padding: 10px;
+      width: 20%;
+      font-size: 18px;
+      font-family: var(--font-family-button);
+      &:hover {
+        background-color: var(--primary-color);
+        box-shadow: 5px 10px 5px var( --textbox-shadow); 
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.ideaInfoLayout {
+  width: fit-content;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding-bottom: 30px;
+  img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  .ideaDetails {
+    padding-top: 10px;
+    .description {
+      margin-left: 15px;
+      font-size: 20px;
+      font-family: var(--font-family-title);
+      text-transform: capitalize;
+      span {
+        margin-left: 5px;
+        font-size: 18px;
+        font-family: var(--font-family-description);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+
+:root{
+    /* Colors */
+    --primary-color: #5C7AEA;
+    --layout-background: #f2f2f2;
+    --white: #fff;
+    --black: #000000;
+    --gray: #808080;
+    --dark-theme-color: #001529;
+    --placeholoder-color:#AAAAAA;
+    --textbox-border: #d9d9d9;
+    --textbox-shadow: #719ECE;
+    --green-button: #28DF99;
+    --green-button-shadow: rgba(46, 229, 157, 0.4);
+    --red-button:#FE9191;
+    --gray-button: #9b9898;
+    --green-color: #2FDD92;
+    --green-success: #52de97;
+    
+    /* Fonts */
+    --font-family-logo:  'M PLUS Rounded 1c', sans-serif;
+    --font-family-sidebar-sourcesans: 'Source Sans 3', sans-serif;
+    --font-family-placeholder: 'PT Sans', sans-serif;
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-title: 'Lato', sans-serif;
+    --font-family-description: 'Nunito', sans-serif;
+    --font-family-heading: 'Nunito', sans-serif;
+    --font-family-number: 'Nunito', sans-serif;
+    --font-family-button: 'Hind Siliguri', sans-serif;
+}

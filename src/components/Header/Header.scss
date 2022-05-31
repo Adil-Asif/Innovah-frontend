@@ -1,0 +1,41 @@
+.headerLayout {
+  height: 70px;
+  background-color: var(--white) !important;
+
+  .ant-input-group-wrapper {
+    transform: translate(300px, 15px);
+
+    .ant-input {
+      border: 2px solid var(--textbox-border);
+      border-radius: 8px 0px 0px 8px;
+    }
+    .ant-input-lg {
+      padding: 5.5px 300px 5.5px 11.5px;
+    }
+
+    .ant-input-search-button {
+      border-radius: 0px 8px 8px 0px !important;
+    }
+  }
+
+  .notificationIcon {
+    float: right;
+
+    margin: 20px;
+    .svg-inline--fa {
+      font-size: 35px ;
+      color: var(--primary-color);
+    }
+
+  }
+
+  .profilePicture {
+    float: right;
+    margin-top: 11px;
+    background-color: var(--primary-color);
+    .profileIcon {
+      color: var(--white);
+    }
+  }
+}
+

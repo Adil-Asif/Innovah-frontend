@@ -1,0 +1,124 @@
+.rewardPage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    .pageTitle {
+      padding: 6% 0 0 0%;
+      margin-left: 35px;
+    }
+    img {
+      width: 15%;
+      padding: 1% 3% 0% 0%;
+    }
+    .innovahPoints {
+      font-size: 20px;
+      font-family: var(--font-family-number);
+      margin-left: 35px;
+      padding-top: 20px;
+      .points {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    }
+    .ant-btn-primary {
+      border: none;
+      color: var(--white);
+      padding: 8px 0px 8px 0px;
+      height: fit-content;
+      text-align: center;
+      margin: 10% 15% 0% 15%;
+      width: 180px;
+      font-size: 18px;
+      font-family: var(--font-family-button);
+      background: linear-gradient(
+          to left,
+          var(--gray) 50%,
+          var(--primary-color) 50%
+        )
+        right;
+      background-size: 200%;
+      transition: 0.5s ease-out;
+      &:hover {
+        //background-color: var(--primary-color);
+        background-position: left;
+      }
+    }
+  }
+  .rewardItemContainer {
+    width: 92%;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    .rewardItem {
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-top: 2%;
+    }
+  }
+}
+
+.addRewardForm {
+  .ant-modal-content {
+    border-radius: 4px;
+    border-color: var(--textbox-border);
+    .ant-modal-header {
+      border-radius: 4px 4px 0px 0px;
+      border-color: var(--textbox-border);
+      .ant-modal-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 8px;
+        font-family: var(--font-family-title);
+        font-weight: 600;
+      }
+    }
+    .rewardForm {
+      text-align: justify;
+      .ant-form-item {
+        display: block;
+      }
+      .ant-form-item-label {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: var(--font-family-heading);
+      }
+    }
+    .ant-input {
+      border-radius: 4px;
+      text-align: justify;
+    }
+    textarea.ant-input {
+      height: 150px;
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    .rewardPoints{
+      .ant-form-item {
+        display: flex;
+      }
+      .ant-input-number-input {
+        border-radius: 4px;
+        text-align: justify;
+      }
+    }
+
+    .ant-modal-footer {
+      .ant-btn {
+        border-radius: 4px;
+      }
+    }
+  }
+}

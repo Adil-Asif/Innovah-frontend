@@ -1,0 +1,28 @@
+.profilePage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    .pageTitle {
+      padding: 4% 0 0 0%;
+      margin-left: 35px;
+    }
+    img {
+      width: 25%;
+      padding: 1% 3% 0% 0%;
+    }
+  }
+  .insights {
+    margin-top: 50px;
+    margin-left: 5.75%;
+    .rightSection {
+      margin-left: 20px;
+    }
+  }
+}

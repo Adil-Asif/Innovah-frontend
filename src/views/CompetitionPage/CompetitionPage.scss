@@ -1,0 +1,131 @@
+.competitionPage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .pageTitle {
+      padding: 4% 0 0 0%;
+      margin-left: 35px;
+    }
+    img {
+      width: 18%;
+      padding: 1% 3% 0% 0%;
+    }
+  }
+  .ideaItemsDashboard {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    .competition {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white);
+      border-radius: 8px;
+      width: 90%;
+      margin-left: 5.75%;
+      padding: 20px;
+      .left {
+        display: flex;
+        align-items: center;
+        .information {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          .title {
+            font-size: 25px;
+            font-family: var(--font-family-title);
+          }
+          .description {
+            font-size: 16px;
+            font-family: var(--font-family-description);
+            text-align: justify;
+            width: 80%;
+          }
+        }
+        .image {
+          width: fit-content;
+          margin-right: 40px;
+        }
+        img {
+          width: 150px;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .difficultyLevel {
+          display: flex;
+
+          .difficultyTitle {
+            font-size: 16px;
+            font-family: var(--font-family-description);
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+        .ant-btn-primary {
+          border: none;
+          color: var(--white);
+          padding: 6px 38px 6px 38px;
+          height: fit-content;
+          text-align: center;
+          width: 100%;
+          font-size: 16px;
+          font-family: var(--font-family-button);
+          background: linear-gradient(
+              to left,
+              var(--gray) 50%,
+              var(--primary-color) 50%
+            )
+            right;
+          background-size: 200%;
+          margin-top: 25px;
+          margin-left: 0px;
+          transition: 0.5s ease-out;
+          &:hover {
+            //background-color: var(--primary-color);
+            background-position: left;
+          }
+        }
+      }
+    }
+  }
+}
+.addCompetitionForm {
+  .ant-modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-heading);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .competitionForm {
+    h3 {
+      font-family: var(--font-family-title);
+      font-weight: bold;
+    }
+    li {
+      font-family: var(--font-family-description);
+      h4 {
+        font-weight: bold;
+      }
+    }
+  }
+  textarea {
+    width: 90%;
+    height: 200px !important;
+   
+  }
+}

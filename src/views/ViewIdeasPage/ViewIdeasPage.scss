@@ -1,0 +1,106 @@
+.viewIdeasPage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    .pageTitle {
+      padding: 4% 0 0 0%;
+      margin-left: 35px;
+    }
+
+    img {
+      width: 18%;
+      padding: 1% 3% 0% 0%;
+    }
+  }
+  .insights {
+    margin-top: 50px;
+    margin-left: 4%;
+    .rightSection {
+      margin-left: 40px;
+    }
+  }
+
+  .feedback {
+    margin-left: 4%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 92%;
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--primary-color);
+      font-size: 25px;
+      font-family: var(--font-family-title);
+      color: white;
+      text-transform: capitalize;
+      padding: 10px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .comments {
+      background-color: var(--white);
+      font-size: 20px;
+      font-family: var(--font-family-description);
+      text-align: justify;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      .feedbackRow {
+        padding: 10px 20px;
+        border-bottom: 2px solid var(--textbox-border);
+        border-radius: 2px;
+        .Image{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .hr{
+          margin-left: -20px;
+          margin-right: -20px;
+          background-color: var(--textbox-border);
+          border-radius: 0;
+          border: none;
+          height: 2px;
+        }
+      }
+    }
+    .response {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .responseForm {
+        .ant-form {
+          display: flex;
+          .ant-input {
+            width: 1030px;
+            border-radius: 8px;
+            margin-right: 20px;
+          }
+          .ant-form-item{
+            margin-bottom: 0px;
+          }
+          .ant-btn{
+            border: none;
+            width: fit-content;
+            height: fit-content;
+            font-size: 0px;
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.workItemsPage {
+  .titleSection {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5.75%;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    .Project-heading {
+      padding: 4% 0 0 0%;
+      margin-left: 35px;
+    }
+    .newtaskbtn {
+      border: none;
+      color: var(--white);
+      padding: 8px 0px 8px 0px;
+      height: fit-content;
+      text-align: center;
+      margin: 10% 10% 0% 12%;
+      width: 180px;
+      font-size: 18px;
+      font-family: var(--font-family-button);
+      background: linear-gradient(
+          to left,
+          var(--gray) 50%,
+          var(--primary-color) 50%
+        )
+        right;
+      background-size: 200%;
+      transition: 0.5s ease-out;
+      &:hover {
+        //background-color: var(--primary-color);
+        background-position: left;
+      }
+    }
+    img {
+      width: 15%;
+      padding: 1% 3% 0% 0%;
+    }
+  }
+
+  .project-container {
+    width: 90%;
+    display: flex;
+    margin: 5.75% 15px 20px 5.75%;
+    justify-content: space-between;
+  }
+  .project-description {
+    width: 55%;
+    padding: 20px;
+
+    background-color: #fff;
+    border-radius: 16px;
+  }
+  .project-tracking {
+    width: 35%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+  .title-of-page {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .tasks {
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    .specific-task {
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .project-status {
+    background-color: #fff;
+    padding: 20px 0px 20px 20px;
+    border-radius: 16px;
+  }
+  .members-list {
+    text-align: left;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .member-images {
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+  }
+  .member-heading {
+    // display: block;
+    width: 100%;
+  }
+
+  .Services-list {
+    text-align: left;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .Service-images {
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: 8px;
+    }
+  }
+  .Service-heading {
+    display: block;
+    width: 100%;
+  }
+  .total-work-items {
+    margin: 3% 5.75%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .work-items {
+    padding: 20px;
+    background-color: #b9c3e9;
+    border-radius: 8px;
+    img {
+      height: 35px;
+      width: 35px;
+    }
+    .work-high-level {
+      padding: 10px;
+    }
+  }
+
+  .specific-task-heading {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px 0px 15px 5.5%;
+    border-bottom: 2px solid var(--gray-button);
+    padding: 0px 0px 10px 10px;
+  }
+  .ID-task {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .task-name {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .type {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+  }
+  .assigned-to {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  .status {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .specific-task-description {
+    border-radius: 4px;
+    margin: 15px 0px 15px 5.5%;
+    height: 5%;
+    width: 90.5%;
+    background-color: #fff;
+    display: flex;
+    padding: 0px 0px 0px 10px;
+    .editbtn {
+      background-color: var(--white);
+      border: none;
+      border-radius: 0px;
+      color: var(--black);
+      height: fit-content;
+      text-align: center;
+    }
+    .editbtn:hover {
+      color: var(--green-button);
+    }
+  }
+}
