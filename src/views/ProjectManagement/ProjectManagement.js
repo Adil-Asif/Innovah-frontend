@@ -20,7 +20,7 @@ const { TextArea } = Input;
 const { Option } = Select;
 
 const ProjectManagement = () => {
-  const role = "admin";
+  
   let project = {
     projectID: "",
     projectTitle: "",
@@ -137,7 +137,7 @@ const ProjectManagement = () => {
 
   const sendDataToDB = async () => {
     let response = await fetch(
-      `http://localhost:5000/generalproject/newProject/projectsubmission/storingtodb`,
+      `https://innovah.herokuapp.com/generalproject/newProject/projectsubmission/storingtodb`,
       {
         // Adding method type
         method: "POST",
@@ -171,7 +171,7 @@ const ProjectManagement = () => {
   const userId = useSelector((state) => state.userDetails.userid);
   let getprojects = async () => {
     let response = await fetch(
-      `http://localhost:5000/generalproject/${userId}`
+      `https://innovah.herokuapp.com/generalproject/${userId}`
     );
     setProjectResponse(await response.json());
   };
@@ -182,11 +182,11 @@ const ProjectManagement = () => {
 
   const getformData = async () => {
     let ideas = await fetch(
-      `http://localhost:5000/generalproject/newProject/projectform/getideas/${userId}`
+      `https://innovah.herokuapp.com/generalproject/newProject/projectform/getideas/${userId}`
     );
     setmyIdeasoptions(await ideas.json());
     let people = await fetch(
-      "http://localhost:5000/generalproject/newProject/projectform/getAllPeople"
+      "https://innovah.herokuapp.com/generalproject/newProject/projectform/getAllPeople"
     );
     setmyTeamOptions(await people.json());
   };
@@ -200,7 +200,7 @@ const ProjectManagement = () => {
 
           <Content style={{ margin: "0 16px" }}>
             <div className="titleSection">
-              {role !== "admin" ? (
+              {userrole !== "Administrator" ? (
                 <>
                   <div className="Project-heading">
                     <PageTitle title="Your Projects" />
@@ -333,7 +333,7 @@ const ProjectManagement = () => {
                                 console.log({ file });
                                 return false;
                               }}
-                              action={"localhost:3000/"}
+                              action={"/"}
                             >
                               <Button
                                 icon={

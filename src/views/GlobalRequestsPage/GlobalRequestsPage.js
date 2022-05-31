@@ -24,7 +24,7 @@ const GlobalRequestsPage = () => {
   ///////////////
  
 const getRequestsAPI = async()=>{
-  let requestResponse = await fetch(`http://localhost:5000/requests/allrequests`)
+  let requestResponse = await fetch(`https://innovah.herokuapp.com/requests/allrequests`)
   setAllGlobalRequests( await requestResponse.json())
 
 }

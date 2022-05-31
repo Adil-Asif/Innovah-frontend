@@ -6,6 +6,7 @@ import { Button, Input, Upload, Modal, Form } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import { useSelector } from "react-redux";
 const { TextArea } = Input;
 
 const IdeasItem = (props) => {
@@ -16,7 +17,7 @@ const IdeasItem = (props) => {
     ideaImage: props.imageUrl,
     isUpdated: false,
   };
-  const role = "admin";
+  const userrole = useSelector((state) => state.userDetails.userrole);
   const allInputs = { imgUrl: "" };
   const [imageAsFile, setImageAsFile] = useState("");
   const [imageAsUrl, setImageAsUrl] = useState(allInputs);
@@ -32,7 +33,7 @@ const IdeasItem = (props) => {
       // fun must have obj as argument and obj must have ideaid
       axios
         .post(
-          "http://localhost:5000/ideas/myideas/globalidea/updatestatus",
+          "https://innovah.herokuapp.com/ideas/myideas/globalidea/updatestatus",
           {ideaid: props.ideaid}
         )
         .then((result) => {
@@ -128,7 +129,7 @@ const IdeasItem = (props) => {
     if (ideaDetails.isUpdated) {
       console.log(ideaDetails);
       axios
-        .post("http://localhost:5000/ideas/myideas", ideaDetails)
+        .post("https://innovah.herokuapp.com/ideas/myideas", ideaDetails)
         .then((result) => {
           console.log(result);
           idea = ideaDetails;
@@ -167,7 +168,7 @@ const IdeasItem = (props) => {
         <div className="description">{props.description}</div>
       </div>
       {props.global ? (
-        role !== "admin" ? (
+        userrole !== "Administrator" ? (
           <>
             <Button
               type="primary"
@@ -280,7 +281,7 @@ const IdeasItem = (props) => {
                         console.log({ file });
                         return false;
                       }}
-                      action={"localhost:3000/"}
+                      action={"/"}
                     >
                       <Button
                         icon={

@@ -59,7 +59,7 @@ const ViewIdeasPage = () => {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/ideas/myideas/viewidea", {
+      .post("https://innovah.herokuapp.com/ideas/myideas/viewidea", {
         ideaid: params.ideaid,
       })
       .then((result) => {
@@ -75,7 +75,7 @@ const ViewIdeasPage = () => {
     if (juryFeedback !== "") {
       axios
         .post(
-          "http://localhost:5000/ideas/myideas/viewidea/juryresponse",
+          "https://innovah.herokuapp.com/ideas/myideas/viewidea/juryresponse",
           juryFeedback
         )
         .then((result) => {

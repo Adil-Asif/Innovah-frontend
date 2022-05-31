@@ -18,7 +18,7 @@ const { Content } = Layout;
 const ProfilePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    axios.get("http://localhost:5000/Profile/").then((result) => {
+    axios.get("https://innovah.herokuapp.com/Profile/").then((result) => {
       console.log(result);
 
       dispatch(

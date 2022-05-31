@@ -1,31 +1,50 @@
 import React from "react";
 import "./Header.scss";
-import { Layout, Input, Space, Avatar, Badge } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { Layout, Avatar, Button } from "antd";
+import { useSelector, useDispatch } from "react-redux";
+import { resetUserDetails } from "../../Slice/initialiseUserDetailsSlice";
+import { Menu, Dropdown } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { Header } = Layout;
-const { Search } = Input;
 
 const CustomHeader = () => {
-  return (
-      <Header className="headerLayout">
-        <Space direction="horizontal">
-          {/* <Search placeholder="Search Ideas" size="large" enterButton /> */}
-        </Space>
+  const dispatch = useDispatch();
+  let navigate = useNavigate();
 
-        <Avatar
-          icon={<UserOutlined className="profileIcon" />}
-          className="profilePicture"
-          size={45}
-        />
-        {/* <Badge size="default" count={5} className="notificationIcon">
-          <FontAwesomeIcon
-            icon={faBell}
-          />
-        </Badge> */}
-      </Header>
+  const movetoHomePage = () => {
+    dispatch(resetUserDetails());
+    navigate("/");
+  };
+
+  const picture = useSelector((state) => state.userDetails.picture);
+  return (
+    <Header className="headerLayout">
+      {/* <Dropdown overlay={menu}  placement="bottom">
+        
+      </Dropdown> */}
+      <div>
+        <Dropdown
+          overlay={
+            <Menu>
+              <Menu.Item>
+                {" "}
+                <div
+                  onClick={() => {
+                    movetoHomePage();
+                  }}
+                >
+                  Logout
+                </div>
+              </Menu.Item>
+            </Menu>
+          }
+          arrow
+        >
+          <Avatar src={picture} className="profilePicture" size={45} />
+        </Dropdown>
+      </div>
+    </Header>
   );
 };
 

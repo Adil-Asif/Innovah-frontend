@@ -30,14 +30,14 @@ const WorkItems = () => {
   console.log(params.projectid);
   const fetchBoards = async () => {
     let response = await fetch(
-      `http://localhost:5000/projectboards/getboard/${params.projectid}`
+      `https://innovah.herokuapp.com/projectboards/getboard/${params.projectid}`
     );
     setFetchBoardItems(await response.json());
    
   };
   const fetchCounts = async()=>{
     let response = await fetch(
-      `http://localhost:5000/projectboards/getboard/${params.projectid}/filter`
+      `https://innovah.herokuapp.com/projectboards/getboard/${params.projectid}/filter`
     );
     setGroupbyItems(await response.json());
     console.log(groupbyItems)
@@ -77,7 +77,7 @@ const WorkItems = () => {
 
   const onFinish = (values) => {
     fetch(
-      `http://localhost:5000/projectboards/${params.projectid}/addnewtask`,
+      `https://innovah.herokuapp.com/projectboards/${params.projectid}/addnewtask`,
       {
         // Adding method type
         method: "POST",
@@ -102,7 +102,7 @@ const WorkItems = () => {
 
   const sendingChangetoDB= async(taskid,updateStatus)=>{
     let response = await fetch(
-      `http://localhost:5000/projectboards/updateboard`,
+      `https://innovah.herokuapp.com/projectboards/updateboard`,
       {
         // Adding method type
         method: "POST",

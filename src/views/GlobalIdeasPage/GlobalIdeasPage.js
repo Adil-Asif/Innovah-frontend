@@ -13,13 +13,13 @@ import { useSelector } from "react-redux";
 const { Content } = Layout;
 
 const GlobalIdeasPage = () => {
-  const [ideaList, setIdeaList] = useState([]);
+  const [ideaList, setIdeaList] = useState([{}]);
 
   const industry = useSelector((state) => state.userDetails.industry);
   const userrole = useSelector((state) => state.userDetails.userrole);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/ideas/myideas/globalidea", {
+      .get("https://innovah.herokuapp.com/ideas/myideas/globalidea", {
         params: {
           userrole: userrole,
           ideaindustry: industry.replace(" ", ""),
@@ -27,7 +27,7 @@ const GlobalIdeasPage = () => {
       })
       .then((result) => {
         console.log(result);
-        setIdeaList(result.data);
+        setIdeaList(result.data.result);
       });
   }, []);
   return (

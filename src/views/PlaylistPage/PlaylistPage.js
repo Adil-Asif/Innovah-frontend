@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import PlaylistItem from "../../components/Playlist/PlaylistItem";
+import { useSelector } from "react-redux";
 const { Content } = Layout;
 const { TextArea } = Input;
 
@@ -25,7 +26,7 @@ const PLayListPage = () => {
     isSubmitted: false,
   };
 
-  const userRole = "trainer";
+  const userrole = useSelector((state) => state.userDetails.userrole);
   const [isUpdate, setIsUpdate] = useState(true);
   const [title, setTitle] = useState("");
   const [videolist, setVideoList] = useState([]);
@@ -38,7 +39,7 @@ const PLayListPage = () => {
     if (videoDetails.isSubmitted) {
       console.log(videoDetails);
       axios
-        .post("http://localhost:5000/Learn/addingvideo", {
+        .post("https://innovah.herokuapp.com/Learn/addingvideo", {
           playlistid: params.playlistid,
           description: videoDetails.videoDescription,
           videoiframe: videoDetails.videoiframe,
@@ -66,7 +67,7 @@ const PLayListPage = () => {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/Learn/playlist", {
+      .post("https://innovah.herokuapp.com/Learn/playlist", {
         playlistid: params.playlistid,
       })
       .then((response) => {
@@ -89,7 +90,7 @@ const PLayListPage = () => {
                 <div className="pageTitle">
                   <PageTitle title={title} />
                 </div>
-                {userRole === "trainer" ? (
+                {userrole === "Trainer" || userrole === "Administrator" ? (
                   <>
                     <div>
                       {" "}

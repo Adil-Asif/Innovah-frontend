@@ -32,7 +32,7 @@ const SpecificProject = () => {
   const fetchProjectDetails = async () => {
     let response = await fetch(
       //get API =  URL / generalproject/userid/projectid
-      `http://localhost:5000/generalproject/${userId}/${params.projectid}`
+      `https://innovah.herokuapp.com/generalproject/${userId}/${params.projectid}`
     );
     setProjectDetails(await response.json());
   };

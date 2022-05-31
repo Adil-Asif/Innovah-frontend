@@ -101,7 +101,7 @@ console.log(userId)
   
 let response = await fetch(
   
-  `http://localhost:5000/requests/addnewrequest/${userId}`,
+  `https://innovah.herokuapp.com/requests/addnewrequest/${userId}`,
   {
     // Adding method type
     method: "POST",
@@ -182,7 +182,7 @@ console.log(response)
               console.log({ file });
               return false;
             }}
-            action={"localhost:3000/"}
+            action={"/"}
           >
             <Button icon={<FontAwesomeIcon icon={faUpload} className="icon" />}>
               Upload Image

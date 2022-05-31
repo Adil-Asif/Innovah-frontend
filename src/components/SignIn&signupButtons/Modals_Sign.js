@@ -8,8 +8,6 @@ import { Modal, Button, Form, Input, message } from "antd";
 
 import axios from "axios";
 
-// import Input from "../Input/Input";
-
 const LoginModals = (props) => {
   console.log(props);
   const [form] = Form.useForm();
@@ -44,9 +42,12 @@ const LoginModals = (props) => {
       emailorname: values.email,
       password: values.password,
     };
-    axios.post("http://localhost:5000/Login/signin", { obj }).then((result) => {
+    axios.post("https://innovah.herokuapp.com/Login/signin", { obj }).then((result) => {
       console.log(result);
-      if (result.data === "Invalid Email" || result.data === "Invalid Password") {
+      if (
+        result.data === "Invalid Email" ||
+        result.data === "Invalid Password"
+      ) {
         message.error(result.data);
         form.resetFields();
       } else {
@@ -80,7 +81,7 @@ const LoginModals = (props) => {
     }
     // console.log("Success:", values);
 
-    // axios.post('http://localhost:5000/Login/signup',obj)
+    // axios.post('https://innovah.herokuapp.com/Login/signup',obj)
     // .then((result)=>{
     //   console.log(result);
     // })
@@ -102,6 +103,7 @@ const LoginModals = (props) => {
           visible={isModalVisible}
           onOk={() => setIsModalVisible(false)}
           onCancel={() => setIsModalVisible(false)}
+          className="homepageModal"
         >
           {/* <Form
           name="basic"
@@ -168,14 +170,9 @@ const LoginModals = (props) => {
           </Form.Item>
         </Form> */}
           <Form
+            className="homepageModalForm"
             form={form}
             name="basic"
-            labelCol={{
-              span: 8,
-            }}
-            wrapperCol={{
-              span: 16,
-            }}
             initialValues={{
               remember: true,
             }}
@@ -193,7 +190,7 @@ const LoginModals = (props) => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ marginLeft: "25px", width: "87%" }} />
             </Form.Item>
 
             <Form.Item
@@ -209,12 +206,7 @@ const LoginModals = (props) => {
               <Input.Password />
             </Form.Item>
 
-            <Form.Item
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}
-            >
+            <Form.Item>
               <Button type="primary" htmlType="submit">
                 Submit
               </Button>
@@ -228,12 +220,12 @@ const LoginModals = (props) => {
           visible={isModalVisible}
           onOk={() => setIsModalVisible(false)}
           onCancel={() => setIsModalVisible(false)}
+          className="homepageModal"
         >
           <Form
+            className="homepageModalForm"
             form={form}
             name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
             initialValues={{ remember: true }}
             onFinish={onFinishSignUp}
             onFinishFailed={onFinishSignUpFailed}
@@ -244,7 +236,7 @@ const LoginModals = (props) => {
               name="email"
               rules={[{ required: true, message: "Please input your Email!" }]}
             >
-              <Input />
+              <Input style={{width: "73%", marginLeft:"84px"}}/>
             </Form.Item>
 
             <Form.Item
@@ -254,7 +246,7 @@ const LoginModals = (props) => {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <Input.Password />
+              <Input.Password style={{width: "78%", marginLeft:"58px"}}/>
             </Form.Item>
             <Form.Item
               label="Re-Enter Password"
@@ -266,11 +258,17 @@ const LoginModals = (props) => {
               <Input.Password />
             </Form.Item>
 
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-              <Button type="primary" htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
+            <div className="submitDetails">
+              <span className="note">
+                Please make sure to enter a valid email address <br />
+                for future references
+              </span>
+              <Form.Item>
+                <Button type="primary" htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </div>
           </Form>
         </Modal>
       )}

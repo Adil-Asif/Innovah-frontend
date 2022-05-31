@@ -21,7 +21,7 @@ const MyRequestsPage = () => {
   console.log(userId);
   const getData = async () => {
     let response = await fetch(
-      `http://localhost:5000/requests/yourrequests/${userId}`
+      `https://innovah.herokuapp.com/requests/yourrequests/${userId}`
     );
     setmyRequests(await response.json());
     console.log(myRequests);

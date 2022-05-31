@@ -27,12 +27,12 @@ const InventoryManagement = () => {
   const [fetchInventoryITems, setFetchInventoryITems] = useState([]);
   const fetchInventory = async () => {
     let response = await fetch(
-      `http://localhost:5000/projectinventory/getinventory/${params.projectid}`
+      `https://innovah.herokuapp.com/projectinventory/getinventory/${params.projectid}`
     );
     setFetchInventoryITems(await response.json());
 
     response = await fetch(
-      `http://localhost:5000/projectinventory/getinventory/${params.projectid}/filter`
+      `https://innovah.herokuapp.com/projectinventory/getinventory/${params.projectid}/filter`
     );
     setGroupbyItems(await response.json());
 
@@ -60,7 +60,7 @@ const InventoryManagement = () => {
 
   const sendingChangetoDB = async (inventoryid, updateStatus) => {
     let response = await fetch(
-      `http://localhost:5000/projectinventory/updateitem`,
+      `https://innovah.herokuapp.com/projectinventory/updateitem`,
       {
         // Adding method type
         method: "POST",
@@ -108,7 +108,7 @@ const InventoryManagement = () => {
       typeof values.inventoryvalue == "number"
     ) {
       fetch(
-        `http://localhost:5000/projectinventory/${params.projectid}/addnewitem`,
+        `https://innovah.herokuapp.com/projectinventory/${params.projectid}/addnewitem`,
         {
           // Adding method type
           method: "POST",

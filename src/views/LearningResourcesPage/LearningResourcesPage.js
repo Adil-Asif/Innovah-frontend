@@ -24,6 +24,7 @@ const LearningResourcesPage = () => {
     playlistImage: "",
     isSubmitted: false, 
   };
+  
   const [learningresourcesList, setLearningresourcesList] = useState([]);
   const [learnigResourceUpdate, setLearnigResourceUpdate] = useState([false]);
   const userrole = useSelector((state) => state.userDetails.userrole);
@@ -123,7 +124,7 @@ const updateStatus = (data) =>
 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/Learn/").then((response) => {
+    axios.get("https://innovah.herokuapp.com/Learn/").then((response) => {
       console.log(response);
       setLearningresourcesList(response.data);
     });
@@ -132,7 +133,7 @@ const updateStatus = (data) =>
     if (playlistDetails.isSubmitted) {
       // TODO: handle post request
       axios
-        .post("http://localhost:5000/Learn/addingplaylist/", {
+        .post("https://innovah.herokuapp.com/Learn/addingplaylist/", {
           trainerid: userid,
           playlistname: playlistDetails.playlistTitle,
           description: playlistDetails.playlistDescription,
@@ -172,7 +173,7 @@ const updateStatus = (data) =>
                 <div className="pageTitle">
                   <PageTitle title="Learning Resources" />
                 </div>
-                {userrole === "Trainer" || "Administrator" ? (
+                {userrole === "Trainer" || userrole ==="Administrator" ? (
                   <>
                     <div>
                       {" "}
@@ -248,7 +249,7 @@ const updateStatus = (data) =>
                                 console.log({ file });
                                 return false;
                               }}
-                              action={"localhost:3000/"}
+                              action={"/"}
                             >
                               <Button
                                 icon={

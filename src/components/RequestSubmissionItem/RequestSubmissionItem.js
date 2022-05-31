@@ -24,7 +24,7 @@ console.log(mySubmissions)
 
 
   const fetchingAllSubmissions = async ()=>{
-let response = await fetch(`http://localhost:5000/requests/getallyoursubmissions/${userId}/${props.requestID.requestid}`)
+let response = await fetch(`https://innovah.herokuapp.com/requests/getallyoursubmissions/${userId}/${props.requestID.requestid}`)
 setMySubmissions(await response.json())  
 
 }
@@ -60,7 +60,7 @@ setMySubmissions(await response.json())
     //data[id].isHired = true;
    
     let response = await fetch(
-      `http://localhost:5000/requests/sendinghiringmail`,
+      `https://innovah.herokuapp.com/requests/sendinghiringmail`,
       {
         // Adding method type
         method: "POST",

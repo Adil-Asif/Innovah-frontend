@@ -1,21 +1,53 @@
-.signInLayout {
+.homepageModal {
   .ant-modal-content {
-    border: 3.25px solid var(--primary-color);
-    border-radius: 16px;
+    border-radius: 4px;
+    border-color: var(--textbox-border);
     .ant-modal-header {
-      border-radius: 16px;
-      border-bottom: none;
-      text-align: center;
-    }
-    .ant-modal-body {
-      text-align: left;
+      border-radius: 4px 4px 0px 0px;
+      border-color: var(--textbox-border);
+      .ant-modal-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 8px;
+        font-family: var(--font-family-title);
+        font-weight: 600;
+      }
     }
     .ant-modal-footer {
+      display: none ;
     }
-  }
-
-  #Submit_button {
-    margin-top: 1em;
-    margin-left: 2.5em;
+    .homepageModalForm {
+      .ant-form-item-label {
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 20px;
+        font-family: var(--font-family-heading);
+      }
+      .ant-input,
+      .ant-input-password {
+        width: 93%;
+        border-radius: 4px;
+        text-align: justify;
+      }
+      .submitDetails {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .note {
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 10px;
+          font-family: var(--font-family-description);
+        }
+      }
+      .ant-btn-primary {
+        width: 100px;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        font-size: 16px;
+        font-family: var(--font-family-description);
+      }
+    }
   }
 }

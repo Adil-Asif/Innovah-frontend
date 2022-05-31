@@ -124,7 +124,7 @@ const RequestsItem = (props) => {
 
   const sendDataToDB = async(object)=>{
     let response = await fetch(
-      `http://localhost:5000/requests/submitrequest`,
+      `https://innovah.herokuapp.com/requests/submitrequest`,
       {
         // Adding method type
         method: "POST",
@@ -339,7 +339,7 @@ const RequestsItem = (props) => {
                     console.log({ file });
                     return false;
                   }}
-                  action={"localhost:3000/"}
+                  action={"/"}
                 >
                   <Button
                     icon={<FontAwesomeIcon icon={faUpload} className="icon" />}
